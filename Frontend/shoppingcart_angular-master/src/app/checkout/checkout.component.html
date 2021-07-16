@@ -1,0 +1,80 @@
+<div class="typo codes icons main-grid-border">
+    <div class="container"> 
+        <div>
+            <h1>Checkout Cart</h1>
+
+
+<div style="display: block;" id="w3lssbmincart">  
+        <ul>        
+          <li *ngFor="let cart of cartObj" class="sbmincart-item sbmincart-item-changed">       
+                   <div class="sbmincart-details-name">             
+                  <a class="sbmincart-name">{{cart.productName}}</a>      
+               </div>         
+               <div class="sbmincart-details-quantity"> 
+                     <select  [(ngModel)]="cart.qty" (change)="qtyChange($event.target.value,cart)">
+                         <option>1</option>
+                         <option>2</option>
+                         <option>3</option>
+                         <option>4</option>
+                         <option>5</option>
+                         <option>6</option>
+                         <option>7</option>
+                         <option>8</option>
+                         <option>9</option>
+                         <option>10</option>
+                    </select>
+               </div>         
+               <div class="sbmincart-details-remove">          
+                   <button (click)="removeCartById(cart)" type="button" class="sbmincart-remove" data-sbmincart-idx="0">×</button>     
+               </div>        
+               <div class="sbmincart-details-price">           
+                 <span class="sbmincart-price">{{cart.price}}</span>       
+               </div>     
+       </li>   
+      																							
+     </ul>  
+     <div class="sbmincart-footer">       
+        <div class="sbmincart-subtotal radio-wrap">  
+            <span><input [(ngModel)]="pay_type" value="cash_on_delivery" type="radio" name="pay_type" /><span  class="radio_text">Cash on Delivery</span></span>
+            <span><input [(ngModel)]="pay_type" value="online" name="pay_type" type="radio"/><span class="radio_text">Online</span></span>
+          </div> 
+          <div class="sbmincart-subtotal">  
+            <textarea placeholder="Enter the Delivery address" [(ngModel)]="delivery_address"></textarea>
+            <textarea placeholder="Enter the Credit Card Number" [(ngModel)]="credit_card_number"></textarea>
+            <textarea placeholder="Enter the Amount" [(ngModel)]="amount"></textarea>
+            <textarea placeholder="Enter the CVC Number" [(ngModel)]="cvc_number"></textarea>
+            <textarea placeholder="Enter the Card Holder's Name" [(ngModel)]="card_holder_name"></textarea>
+         </div>
+         
+         
+       <div class="sbmincart-subtotal">  
+        Subtotal: <span class="price">${{cartTotalPrice}}</span>
+     </div>  
+     
+   
+     <div>
+             <button (click)="checkoutCart()">Place Order</button>   																				
+      </div>
+               </div>  
+    <input type="hidden" name="bn" value="sbmincart_AddToCart_WPS_US">   
+  </div>
+        </div>
+        
+    </div>	
+</div>
+  
+
+<!-- footer -->
+<div class="footer">
+    
+    <div class="footer-copy">
+        <div class="footer-copy1">
+            <div class="footer-copy-pos">
+                <a href="#home1" class="scroll"><img src="images/arrow.png" alt=" " class="img-responsive" /></a>
+            </div>
+        </div>
+        <div class="container">
+            <p>&copy; By Gamitha | Sanduni | Sachindu | Nimesha </p>
+        </div>
+    </div>
+</div>
