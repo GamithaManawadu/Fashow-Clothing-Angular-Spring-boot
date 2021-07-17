@@ -1,0 +1,23 @@
+<h2 style="align-content: center"> Seller List </h2>
+<table class = "table table-striped">
+  <thead>
+  <tr>
+    <th> Seller Name </th>
+    <th> Seller Email Address </th>
+    <th> View Seller</th>
+    <th> Delete Seller</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor = "let seller of sellers">
+    <td> {{seller.name!}} </td>
+    <td>{{seller.email!}}</td>
+    <td>
+      <button (click) = "sellerDetails(seller.id)" class= "btn btn-info" style="margin-left: 10px; background-color: #669999"> View </button>
+    </td>
+    <td>
+      <button (click) = "deleteSeller(seller.id)" class= "btn btn-danger" style="margin-left: 10px"> Delete </button>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,37 @@
+<div class="col-md-6 offset-md-3">
+<h3> Add Item</h3>
+<form (ngSubmit) = "onSubmit()">
+
+    <div class = "form-group">
+        <label>Item Name</label>
+        <input type="text" class="form-control" id="itemName"
+            [(ngModel)] = "item.itemName" name="itemName">
+    </div>
+    <br>
+    <div class = "form-group">
+        <label>Item Category</label>
+        <input type="text" class="form-control" id="itemCategory"
+            [(ngModel)] = "item.itemCategory" name="itemCategory">
+    </div>
+    <br>
+    <div class = "form-group">
+        <label>Item Cost</label>
+        <input type="text" class="form-control" id="itemCost"
+            [(ngModel)] = "item.itemCost" name="itemCost">
+    </div>
+    <br>
+    <div class = "form-group">
+        <label>Item Selling Price</label>
+        <input type="text" class="form-control" id="itemSellingPrice"
+            [(ngModel)] = "item.itemSellingPrice" name="itemSellingPrice">
+    </div>
+    <br>
+    <div class = "form-group">
+        <label>Item Quantity</label>
+        <input type="text" class="form-control" id="itemQuantity"
+            [(ngModel)] = "item.itemQuantity" name="itemQuantity">
+    </div>
+    <br>
+    <button class = "btn btn-success" type="submit"> Submit</button>
+</form>
+</div>
